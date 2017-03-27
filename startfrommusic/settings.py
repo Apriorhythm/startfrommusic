@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'apriori__user',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,16 @@ WSGI_APPLICATION = 'startfrommusic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'startfrommusic',
+        'USER':'root',
+        'PASSWORD':'startfrommusic',
+        'HOST':'127.0.0.1',
+        'PORT':'3306'
     }
 }
+
+
 
 
 # Password validation
