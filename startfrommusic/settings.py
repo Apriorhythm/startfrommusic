@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'sfm_user.apps.SfmUserConfig',
+    'sfm_index.apps.SfmIndexConfig',
 ]
 
 MIDDLEWARE = [

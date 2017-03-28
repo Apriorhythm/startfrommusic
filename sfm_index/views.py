@@ -8,11 +8,11 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 
-from .models import User
 
 # Create your views here.
 def index(request):
-    template = loader.get_template('sfm_user/index.html')
+    template = loader.get_template('sfm_index/index.html')
 
     return HttpResponse(template.render(request))
+
 

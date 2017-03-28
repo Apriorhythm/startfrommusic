@@ -9,6 +9,4 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
 
-    # /user/username/
-    # url(r'^(?P<username>)[a-z]+$', views.fromUsernameToUid, name='fromUsernameToUid'),
 ]
