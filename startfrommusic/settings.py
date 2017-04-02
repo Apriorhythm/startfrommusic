@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'sfm_index.apps.SfmIndexConfig',
     'sfm_user.apps.SfmUserConfig',
-    'sfm_user.apps.SfmMusicConfig',
+    'sfm_music.apps.SfmMusicConfig',
 ]
 
 
