@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html>  
+	<head>  
+		<title>Login</title>  
+		{% load staticfiles %}
+		<script type="text/javascript" src="{% static '/js/jquery-3.2.0.min.js' %}"></script>
+		<script type="text/javascript" src="{% static '/bootstrap-3.3.7-dist/js/bootstrap.js' %}"></script>
+		<script type="text/javascript" src="{% static '/js/login.js' %}"></script>
+
+		<link type="text/css" rel="stylesheet" href="{% static '/bootstrap-3.3.7-dist/css/bootstrap.css' %}">
+>
+
+
+	</head>  
+	<body>  
+
+	<div class="jumbotron">
+	  <h1>Let's Start From Music!</h1>
+	</div>
+
+	<div>
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">--</span>
+			<input id="uid" type="text" class="form-control" placeholder="User ID" aria-describedby="basic-addon1">
+		</div>
+
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">--</span>
+			<input id="password" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+		</div>
+	</div>
+
+	<button id="loginButton"  class="btn btn-default">Login</button>
+	<button id="registerButton"  class="btn btn-default">Register</button>
+
+
+
+	</body>  
+</html>

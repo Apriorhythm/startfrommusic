@@ -7,12 +7,26 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 from .models import User
 
-# Create your views here.
-def index(request):
-    template = loader.get_template('sfm_user/index.html')
+def login(request):
+    return render(request, 'sfm_user/login.html')
 
-    return HttpResponse(template.render(request))
+def register(request):
+    return render(request, 'sfm_user/register.html')
+
+@csrf_exempt
+def validate(request):
+    #uid = request.POST["uid"]
+    #password = request.POST["password"]
+    #print("uid:" + uid + "\npassword" + password)
+    if request.POST:
+        print("#################################")
+        print(request.POST)
+        print("#################################")
+    return HttpResponse("OK")
+
 

@@ -20,7 +20,9 @@ from django.contrib import admin
 from django.conf.urls import include
 
 urlpatterns = [
-    url(r'^$', include('sfm_index.urls')),
     url(r'^admin/', admin.site.urls),
+
+    url(r'', include('sfm_index.urls')),
     url(r'^user/', include('sfm_user.urls')),
+    url(r'^music/', include('sfm_music.urls')),
 ]

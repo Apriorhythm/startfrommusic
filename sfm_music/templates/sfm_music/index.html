@@ -1,0 +1,19 @@
+
+{% extends 'sfm_music/base.html' %}
+
+{% block sfm_title %}
+Index
+{% endblock %}
+
+{% block sfm_staticfiles %}
+	{% load staticfiles %}
+	<link type="text/css" rel="stylesheet" href="{% static '/css/index.css' %}">
+{% endblock %}
+
+{% block sfm_body %}
+	{% for netease in all_netease %}
+	<ul>
+		<li><a href="{% url 'music:detail' netease.id %}">{{ netease.title }}</li>
+	</ul>
+	{% endfor %}
+{% endblock %}
