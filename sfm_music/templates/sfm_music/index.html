@@ -13,7 +13,26 @@ Index
 {% block sfm_body %}
 	{% for netease in all_netease %}
 	<ul>
-		<li><a href="{% url 'music:detail' netease.id %}">{{ netease.title }}</li>
+		<li>
+			<a href="{% url 'music:detail' netease.id %}">{{ netease.title }}</a>&nbsp;
+			
+			<!-- Update -->
+			<form action="{% url 'music:netease-update' netease.id %}" method="post" style="display:inline;">
+				{% csrf_token %}
+				<button type="submit" class="btn btn-default">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+			</form>
+
+			<!-- Update -->
+			<form action="{% url 'music:netease-delete' netease.id %}" method="post" style="display:inline;">
+				{% csrf_token %}
+				<button type="submit" class="btn btn-default">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</form>
+			
+		</li>
 	</ul>
 	{% endfor %}
 {% endblock %}

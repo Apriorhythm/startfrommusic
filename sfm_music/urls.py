@@ -12,4 +12,15 @@ urlpatterns = [
     # /music/detail/1234/
     url(r'^detail/(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
 
+    # /music/netease/add/
+    url(r'^netease/add$', views.NeteaseCreate.as_view(), name='netease-add'),
+
+    # /music/netease/25/
+    url(r'^netease/(?P<pk>[0-9]+)/$', views.NeteaseUpdate.as_view(),
+    name='netease-update'),
+
+    url(r'^netease/(?P<pk>[0-9]+)/delete$', views.NeteaseDelete.as_view(),
+    name='netease-delete'),
+
+
 ]

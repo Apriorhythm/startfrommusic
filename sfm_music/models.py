@@ -8,14 +8,19 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
 class Netease(models.Model):
     songId = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
+    artist = models.CharField(max_length=100)
     uploadDate = models.DateTimeField(auto_now=True)
     uid = models.CharField(max_length=100)
+
+    def get_absolute_url(self):
+        return reverse('music:detail', kwargs={'pk':self.pk})
 
     def __str__(self):
         return 'songId:' + self.songId + '\n title:' + self.title
