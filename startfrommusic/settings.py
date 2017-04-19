@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'sfm_base.apps.SfmBaseConfig',
     'sfm_index.apps.SfmIndexConfig',
     'sfm_user.apps.SfmUserConfig',
     'sfm_music.apps.SfmMusicConfig',
